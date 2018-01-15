@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Introduction of Visualization. Why Visualization is so important. How to build good Visualization" />
+    <meta name="keywords" content="Visualization, Graph, diagram, big data, scatter plot, box plot, histogram"/>
+    <title>Visualization</title>
+<link href='https://fonts.googleapis.com/css?family=Special%20Elite' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style type="text/css">
+
+#intro{
+    text-align:center;
+    font-family:"Roboto Condensed";
+    /*color:white;
+    background-color:#333;*/
+    background-color:#f5f5f5;
+    margin:0;
+    padding:5% 20% 5% 20%;
+    font-size:16pt;
+}
+
+
+#intro button{
+    background-color:white;
+    color:#333;
+    border: #333 solid 2px;
+    font: 16pt 'Roboto Condensed';
+    padding: 5px 40px;
+    margin-bottom:5%;
+}
+#intro2{
+    padding:5% 20% 5% 20%;
+    font-family:"Roboto Condensed";
+    font-size:16pt;
+    color:white;
+    background-color:#333;
+}
+#intro2 td{
+    padding:20px 50px;
+    width:250px;
+    vertical-align:top;
+}
+span{
+    font-weight:bold;
+    font-size:18pt;
+}
+
+#diagram{
+    text-align:center;
+    font-family:"Roboto Condensed";
+    font-size:16pt;
+
+}
+#d1{
+    width:60%;
+}
+
+
+</style>
+
+
+<script type="text/javascript">
+
+var state = 0;
+$(document).ready(function(){
+    $('#h2').show();
+    $("#h2").animate({left: '23%',opacity: '1.0'},"slow");   
+    $('#button').click(function(){
+        $("#video").slideToggle("quick");
+        if (state ==0){
+            $('#button').text("Close");
+        }
+        else{
+             $('#button').text("Learn More");
+        }
+        state = 1 - state
+    }); 
+});
+</script>
+
+</head>
+
+<body>
+
+<div id="navigator">
+<ul>
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="Tool.htm">Analytical Tools</a></li>
+  <li class="dropdown">
+      <a href="Visualization.htm" class="dropbtn">Visualization</a>
+  <div class="dropdown-content">
+      <a href="DP1.htm">Histogram</a>
+      <a href="DP2.htm">Scatter Plot</a>
+      </div></li>
+  <li class="dropdown">
+      <a href="ML.htm" class="dropbtn">Machine Learning</a>
+  <div class="dropdown-content">
+      <a href="ML1.htm">Linear Regression</a>
+      <a href="ML2.htm">Clustering</a>
+      </div></li>
+  <li><a href="Resource.htm">Resource</a></li>
+  <li class="dropdown">
+      <a href="AboutMe.htm" class="dropbtn">About Me</a>
+<div class="dropdown-content">
+    <a href="Contact.htm">Contact Me</a>
+    </div></li>
+<li><a href="credit.htm">Site Credit</a></li>
+</ul>
+</div>
+
+<div id="head" style="background-color:#f5f5f5">
+    <img id ="f1" src="picture/2.jpg" alt="p1">
+    <h1> Data Visualization‎ </h1>
+    <h2 id='h2'> - The Most Efficient Method to Understand and Present Your Data -</h2>
+</div>
+
+<div id="intro">
+<h2>Why Data Visualization is Important?</h2>
+    <br>
+    <p>Because of the way the human brain processes information, using charts or graphs to visualize large amounts of complex data is easier 
+        than poring over spreadsheets or reports. Data visualization is a quick, easy way to convey concepts in a universal manner – and you 
+        can experiment with different scenarios by making slight adjustments. 
+    </p> 
+    <button id='button'>Learn More</button>
+    
+    <div id="video" style="display:none;"> 
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/5Zg-C8AAIGg" allowfullscreen></iframe>
+    <br></div>
+</div>
+
+<div id="intro2">
+<table>
+    <tr>
+        <td colspan="3" style="text-align:center;"><h2>What Makes Good Data Visualization?</h2></td> 
+    </tr>
+    <tr>
+        <td><span>Everything depends on</span> the concept of layering, establishing hierarchies and making them clear. </td>
+        <td><span>Challenging the viewer</span> to think about the substance rather than about the methodology, graphic design, or the technology used to make the visualization. </td>
+        <td><span>Encourage the eye to compare</span>, reveal the data at several levels of detail, from a broad overview to minute statistics. </td>
+    </tr>
+</table>
+</div>
+
+<div id="diagram">
+    <h2>Types of Data Viz</h2>
+    <br>
+    <img src="picture/diagram.png" id="d1" usemap="#d1" alt="diagram">
+</div>
+
+<map name="d1">
+			<area shape = "rect" coords="0,0,338,302" href="https://en.wikipedia.org/wiki/Line_chart" alt="line chart">
+			<area shape = "rect" coords="338,0,676,302" href="https://en.wikipedia.org/wiki/Bar_chart" alt="Bar Chart">
+            <area shape = "rect" coords="676,0,1014,302" href="https://support.office.com/en-us/article/Add-change-or-remove-a-trendline-in-a-chart-fa59f86c-5852-4b68-a6d4-901a745842ad" alt="trendline">
+            <area shape = "rect" coords="0,302,338,604" href="https://en.wikipedia.org/wiki/Box_plot" alt="Box Plot">
+            <area shape = "rect" coords="338,302,676,604" href="https://en.wikipedia.org/wiki/Scatter_plot" alt="Scatter Plot">
+            <area shape = "rect" coords="676,302,1014,604" href="https://en.wikipedia.org/wiki/Area_chart" alt="Area chart">
+</map>
+
+<div id="footer">
+    <p>Created by Yuxuan Wang @ Babson College</p>
+</div>
+
+</body>
+
+</html>

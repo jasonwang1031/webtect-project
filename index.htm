@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--jQuery:
+1. Create animation for the h2 content of the head section of each page
+2. Improve the design of the history section on index.htm
+3. Improve the "Learn More & Close" function for youtube video on the index.htm, ML.htm, visualization.htm
+4. Add a datepicker for the contact form on contact.htm
+
+Other Improvements:
+1. Build a mobile home page with bootstrap
+2. Improve the resource.htm with more animation
+
+Mistake from last release:
+1. Add Keywords meta tag to other pages
+-->
+
+
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Introduction of Data Science to aspiring student" />
+    <meta name="keywords" content="Machine Learning, Data Science, History, Data Analytics, Businese Analytics, Big Data, Business Intelligence"/>
+    <title>home</title>
+<link href='https://fonts.googleapis.com/css?family=Special%20Elite' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+
+#head{
+    margin:0;
+    padding:0;
+    background-color:#333;  
+    }
+
+#keywords{
+    padding:5% 10% 5% 14% ;
+    text-align:center;
+    background-image:url("picture/1.1.png");
+}
+
+.icon{
+    width: 50%;
+}
+
+
+#keywords td{
+    width: 400px;
+    vertical-align:top;
+    font-family: 'Roboto Condensed';
+    font-size:16pt;
+    padding:0 3%;
+}
+#keywords h3{
+    letter-spacing:1px;
+    font-family: 'Roboto Condensed';
+    font-size:20pt;
+}
+#history{
+ margin:5% 0 5% 0;
+ width:100%; 
+
+}
+#container{
+    margin:5% 30%;
+    font-size:18pt;
+    border: solid 2px #333;
+    padding: 10px;
+    background-color:#333;
+    color:white;
+    text-align:center;
+    font-family: 'Roboto Condensed';
+}
+#history img{
+    width:15%;
+}
+#history table{
+  margin:5% 20%;
+}
+#history td{ 
+    width:250px;   
+    padding:0 10px;
+    font-family: 'Roboto Condensed';
+    font-size:20pt;
+    color:white;
+    background-color:#333;
+    text-align:center;
+    border: solid white 2px;
+}
+#hh1,#hh2,#hh3,#hh4,#hh5,#hh6,#hh7{
+    position:relative;
+}
+
+#tt1:hover,
+#tt2:hover,
+#tt3:hover,
+#tt4:hover,
+#tt5:hover,
+#tt6:hover,
+#tt7:hover{
+    background-color:white !important;
+    color:#333 !important;
+    border: solid 2px #333 !important;
+}
+
+
+#what{
+    background-color: #333;
+    font-family: 'Roboto Condensed';
+    color:white;
+    margin:0;
+    padding:7% 20% 5% 20%;
+    font-size:16pt;
+    text-align:center;
+}
+#what h2{
+    font-size:30pt;
+}
+#what button{
+    background-color:#333;
+    color:white;
+    border: white solid 2px;
+    font: 16pt 'Roboto Condensed';
+    padding: 5px 40px;
+    margin-bottom:5%;
+}
+span{
+    font-size:18pt;
+}
+</style>
+
+
+<script type="text/javascript">
+
+// <![CDATA[  
+var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
+	if (mobile) {  
+        	document.location="mindex.htm"
+	}
+// ]]>
+
+
+var w = 0;
+function move()
+{
+    arrow = document.getElementById('arrow');
+    w = w + 2;
+    arrow.style.marginLeft = w + '%';
+    if (w > 80)
+    {
+        w = 0;
+    }
+    setTimeout("move()",10);
+}
+
+var imageList = new Array("picture/1.png","picture/2.jpg","picture/3.jpg");
+var c = -1;
+// slide show
+function slideshow()
+{   
+    setTimeout('slideshow()', 7000);
+    c = c + 1;
+    if (c == imageList.length)
+    {
+        c = 0;
+    }
+    document.getElementById('f1').src= imageList[c];
+}
+
+var state = 0;
+
+$(document).ready(function(){
+    $('#h2').show();
+    $("#h2").animate({left: '26%',opacity: '1.0'},"slow");    
+    
+    $('#button').click(function(){
+        $("#video").slideToggle("quick");
+        if (state ==0){
+            $('#button').text("Close");
+        }
+        else{
+             $('#button').text("Learn More");
+        }
+        state = 1 - state
+    });
+
+    $('#tt1').click(function(){
+        $(".hh").css("display","none");
+        $('#hh1').css("display","block");
+        $(".tt").css("background-color",'#333');
+        $(".tt").css("color",'white');
+        $('.tt').css("border","solid white 2px");
+        $('#tt1').css("background-color","white");
+        $('#tt1').css("color","#333");
+        $('#tt1').css("border","solid #333 2px");
+    });
+    $('#tt2').click(function(){
+        $(".hh").css("display","none");
+        $('#hh2').css("display","block");
+        $(".tt").css("background-color",'#333');
+        $(".tt").css("color",'white');
+        $('.tt').css("border","solid white 2px");
+        $('#tt2').css("background-color","white");
+        $('#tt2').css("color","#333");
+        $('#tt2').css("border","solid #333 2px");
+    });
+    $('#tt3').click(function(){
+        $(".hh").css("display","none");
+        $('#hh3').css("display","block");
+        $(".tt").css("background-color",'#333');
+        $(".tt").css("color",'white');
+        $('.tt').css("border","solid white 2px");
+        $('#tt3').css("background-color","white");
+        $('#tt3').css("color","#333");
+        $('#tt3').css("border","solid #333 2px");
+    });
+    $('#tt4').click(function(){
+        $(".hh").css("display","none");
+        $('#hh4').css("display","block");
+        $(".tt").css("background-color",'#333');
+        $(".tt").css("color",'white');
+        $('.tt').css("border","solid white 2px");
+        $('#tt4').css("background-color","white");
+        $('#tt4').css("color","#333");
+        $('#tt4').css("border","solid #333 2px");
+    });
+    $('#tt5').click(function(){
+        $(".hh").css("display","none");
+        $('#hh5').css("display","block");
+        $(".tt").css("background-color",'#333');
+        $(".tt").css("color",'white');
+        $('.tt').css("border","solid white 2px");
+        $('#tt5').css("background-color","white");
+        $('#tt5').css("color","#333");
+        $('#tt5').css("border","solid #333 2px");
+    });
+    $('#tt6').click(function(){
+        $(".hh").css("display","none");
+        $('#hh6').css("display","block");
+        $(".tt").css("background-color",'#333');
+        $(".tt").css("color",'white');
+        $('.tt').css("border","solid white 2px");
+        $('#tt6').css("background-color","white");
+        $('#tt6').css("color","#333");
+        $('#tt6').css("border","solid #333 2px");
+    });
+    $('#tt7').click(function(){
+        $(".hh").css("display","none");
+        $('#hh7').css("display","block");
+        $(".tt").css("background-color",'#333');
+        $(".tt").css("color",'white');
+        $('.tt').css("border","solid white 2px");
+        $('#tt7').css("background-color","white");
+        $('#tt7').css("color","#333");
+        $('#tt7').css("border","solid #333 2px");
+    });
+});
+</script>
+
+</head>
+
+<body onload="move(); slideshow()">
+<div id="navigator">
+<ul>
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="Tool.htm">Analytical Tools</a></li>
+  <li class="dropdown">
+      <a href="Visualization.htm" class="dropbtn">Visualization</a>
+  <div class="dropdown-content">
+      <a href="DP1.htm">Histogram</a>
+      <a href="DP2.htm">Scatter Plot</a>
+      </div></li>
+  <li class="dropdown">
+      <a href="ML.htm" class="dropbtn">Machine Learning</a>
+  <div class="dropdown-content">
+      <a href="ML1.htm">Linear Regression</a>
+      <a href="ML2.htm">Clustering</a>
+      </div></li>
+  <li><a href="Resource.htm">Resource</a></li>
+  <li class="dropdown">
+      <a href="AboutMe.htm" class="dropbtn">About Me</a>
+<div class="dropdown-content">
+    <a href="Contact.htm">Contact Me</a>
+    </div></li>
+<li><a href="credit.htm">Site Credit</a></li>
+</ul>
+</div>
+
+<div id="head">
+    <img id ="f1" src="picture/1.png" alt="p1">
+    <h1> Data Science </h1>
+    <h2 id='h2'> - Unleash the Power of Big Data to Serve Business Needs -</h2>
+</div>
+
+<div id="what">
+    <h2>What is Data Science?</h2>
+    <br>
+    <p style="margin-bottom:7%;"> Data science is a multidisciplinary blend of statistics, computer science, and business in order to solve analytically complex problems.
+        At its core, data science involves using automated methods to analyze massive amounts of data and to extract knowledge from them.  
+    </p> 
+    <button id='button'>Learn More</button>
+    
+    <div id="video" style="display:none;"> 
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/mhe5kX10CR4" allowfullscreen></iframe>
+    <br>
+</div>
+</div>
+<div id="history">
+<h2 style="text-align:center; font-family:'Special Elite'; font-size:26pt; padding-bottom:3%">Development of Data Science</h2>
+<p style="margin:2% 20% 5% 20%; font-size:18pt; font-family:'Roboto Condensed';text-align:center;">Started with statistics, Data Science has quickly evolved to include concepts/practices such as Artificial Intelligence, Machine Learning, Deep Learning and the Internet of Things. 
+    There are many different dates and timelines that can be used to trace the slow growth of Data Science and its current impact on the Data Management industry, some of the more significant ones are outlined below.
+</p>
+
+<table>
+    <tr>
+        <td colspan="7" style='background:none; margin:0; padding:0; text-align:left;'><img id="arrow" src="picture/m.PNG" alt="arrow"></td>
+    </tr>
+    <tr>
+        <td id='tt1' class='tt' style='background-color:white; color:#333; border: solid 2px #333;'>1997</td>
+        <td id='tt2' class='tt'>2001</td>
+        <td id='tt3' class='tt'>2005</td>
+        <td id='tt4' class='tt'>2009</td>
+        <td id='tt5' class='tt'>2010</td>
+        <td id='tt6' class='tt'>2011</td>
+        <td id='tt7' class='tt'>2012</td>
+    </tr>
+</table>
+<div id='container'>
+        <div id='hh1' class='hh'>The journal Data Mining and Knowledge Discovery is launched; the reversal of the order of the two terms in its title reflecting the ascendance of 
+        “data mining” as the more popular way to designate “extracting information from large databases.”</div>
+        <div id='hh2' class='hh' style='display:none'> William S. Cleveland publishes "Data Science: An Action Plan for Expanding the Technical Areas of the Field of Statistics." It is a plan “to 
+            enlarge the major areas of technical work of the field of statistics. Because the plan is ambitious and implies substantial change, the altered field will be called ‘data science.’"</div>
+        <div id='hh3' class='hh' style='display:none'> The National Science Board publishes “Long-lived Digital Data Collections: Enabling Research and Education in the 21st Century.” 
+            One of the recommendations of the report reads: “The NSF should act to develop and mature the career path for data scientists and to ensure that the research 
+            enterprise includes a sufficient number of high-quality data scientists.”	</div>
+        <div id='hh4' class='hh' style='display:none'>Hal Varian, Google’s Chief Economist, tells the McKinsey Quarterly: “I keep saying the sexy job in the next ten years will be statisticians. 
+            People think I’m joking, but who would’ve guessed that computer engineers would’ve been the sexy job of the 1990s? The ability to take data—to be able to understand it, to process it, 
+            to extract value from it, to visualize it, to communicate it—that’s going to be a hugely important skill in the next decades… </div>
+        <div id='hh5' class='hh' style='display:none'>Kenneth Cukier writes in The Economist Special Report: a new kind of professional has emerged, the data scientist, 
+        who combines the skills of software programmer, statistician and storyteller/artist to extract value of data.”</div>
+        <div id='hh6' class='hh' style='display:none'> David Smith writes in "’Data Science’:  What's in a name?”:   “The terms ‘Data Science’ and ‘Data Scientist’ have only been in common usage 
+            for a little over a year, but they've really taken off since then: many companies are now hiring for ‘data scientists’, and entire conferences are run under the name of ‘data science’.</div>
+        <div id='hh7' class='hh' style='display:none'>Tom Davenport and D.J. Patil publish “Data Scientist: The Sexiest Job of the 21st Century” in the Harvard Business Review.</div>
+</div>
+</div>
+
+<div id="keywords">
+
+    <h2 style="font-family:Special Elite; margin-bottom:8%; font-size: 26pt;">Key Conceptions</h2>
+    <table style='margin-left:2%;'>
+        <tr>
+            <td><img src="picture/icon1.png" alt="icon1" class="icon"/></td>
+            <td><img src="picture/icon2.png" alt="icon2" class="icon"/></td>
+            <td><img src="picture/icon3.png" alt="icon3" class="icon"/></td>
+        </tr>
+
+        <tr>
+            <td><h3>Big Data</h3></td>
+            <td><h3>Visulization</h3></td>
+            <td><h3>Machine Learning</h3></td>
+        </tr>
+        <tr style="text-align: center; letter-spacing:1px;">
+
+            <td>Big data includes every digital transaction or social media posts. 
+                Analyzing big data can lead to better business decisions.</td>
+
+            <td>Data visualization is to present information clearly and efficiently with statistical graphics and 
+                plots.</td>
+
+            <td>In the past decade, machine learning has given us self-driving cars,
+                effective web search, and a vastly improved understanding of the human genome. </td>
+        </tr>
+    </table>
+</div>
+
+<div id="footer">
+    <p>Created by Yuxuan Wang @ Babson College</p>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Introduction of the Babson Student who built this Web Tect Project" />
+    <title>About Me</title>
+<link href='https://fonts.googleapis.com/css?family=Special%20Elite' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style type="text/css">
+#myself{
+    /*background-color: #333;*/
+    font-family: 'Roboto Condensed';
+    color:black;
+    margin:0;
+
+    padding:5% 20% 5% 20%;
+    font-size:16pt;
+    text-align:left;
+
+}
+
+#Babson{
+    font-family: 'Roboto Condensed';
+    margin:0;
+    background-color: #006644;
+    color:white;
+    padding:5% 20% 5% 20%;
+    font-size:16pt;
+    text-align:left;
+
+}
+#Babson h2,
+#myself h2{
+    text-align:center;
+    font-weight:bold;
+    font-size:25pt;
+}
+#myself img,
+#Babson img{
+    float:left;
+    width:19%;
+    padding:0 20px 80px 0;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#h2').show();
+    $("#h2").animate({left: '33%',opacity: '1.0'},"slow");    
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div id="navigator">
+<ul>
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="Tool.htm">Analytical Tools</a></li>
+  <li class="dropdown">
+      <a href="Visualization.htm" class="dropbtn">Visualization</a>
+  <div class="dropdown-content">
+      <a href="DP1.htm">Histogram</a>
+      <a href="DP2.htm">Scatter Plot</a>
+      </div></li>
+  <li class="dropdown">
+      <a href="ML.htm" class="dropbtn">Machine Learning</a>
+  <div class="dropdown-content">
+      <a href="ML1.htm">Linear Regression</a>
+      <a href="ML2.htm">Clustering</a>
+      </div></li>
+  <li><a href="Resource.htm">Resource</a></li>
+  <li class="dropdown">
+      <a href="AboutMe.htm" class="dropbtn">About Me</a>
+<div class="dropdown-content">
+    <a href="Contact.htm">Contact Me</a>
+    </div></li>
+<li><a href="credit.htm">Site Credit</a></li>
+</ul>
+</div>
+
+<div id="head" style="background-color:white;">
+    <img id ="f1" src="picture/1.png" alt="p1">
+    <h1> About Me‎ </h1>   
+    <h2 id='h2'>- Basic Information of My Background -</h2>
+</div>
+
+<div id="myself">
+<h2>Who am I?</h2>
+<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAA2oAAAAJDg2ZGY2YmUyLWZlZDItNDk5Ni1iNmY5LWRiYjgzOWI5Yzc4Nw.jpg" alt="me">
+My name is Yuxuan Wang, and I am originally from Wuhan, which is a big city in central China. Currently, I am a senior student at Babson College, and my
+concentrations are business analytics and quantitative methods.This website I built is for my course, Web Tech. Because I am really interested 
+in data science, I decided to build my website for introducing data science to students who's also intrested in it. Data Science is a newly developed, but
+highly important field. I spent a long time on building skill for it, and I want to work in this field in the future.
+<br><br>
+In the spare time, I love travel and food. I've already been to many countries in the world, and I enjoy the different sightseeing, cultures and foods.
+I am willing to try all kinds of food, and I'd like to cook for myself and my friends and families. 
+</div>
+
+<div id="Babson">
+<h2>Babson College</h2>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Babson_College_seal.svg/1200px-Babson_College_seal.svg.png" alt="bab">
+Babson College is a private business school in Wellesley, Massachusetts, established in 1919. Its central focus is on entrepreneurship education, and it is 
+often ranked the most prestigious entrepreneurship college in the United States. 
+<br><br>
+It was founded by Roger W. Babson as an all-male business institute. 
+Now co-ed, Babson College offers bachelor's degrees in business administration and undergraduate students have the opportunity to declare concentrations 
+in more than twenty-five areas of study. Often referred to as the "Entrepreneur's College", Babson is renowned for immersing its students in the entrepreneurial
+lifestyle and culture. Babson is also notable for its Foundations of Management and Entrepreneurship course, in which every enrolled first-year student starts,
+runs and dissolves a company.
+</div>
+
+
+
+<div id="footer">
+    <p>Created by Yuxuan Wang @ Babson College</p>
+</div>
+</body>
+
+</html>

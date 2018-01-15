@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="description" content="Introduction of Clustering, What is Clustering, Different types of clustering" />
+      <meta name="keywords" content="Machien Learning, Clustering, Analysis, K Means"/>
+    <title>Clustering</title>
+<link href='https://fonts.googleapis.com/css?family=Special%20Elite' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style type="text/css">
+
+#intro1{
+    text-align:center;
+    font-family:"Roboto Condensed";
+    background-color:#333;
+    margin:0;
+    padding:5% 20% 5% 20%;
+    font-size:16pt;
+    color:white;
+}
+
+#intro2 h2,
+#intro3 h2{
+    text-align:center;
+}
+
+
+#intro2{
+    text-align:left;
+    font-family:"Roboto Condensed";
+    color:black;
+    background-color:#f5f5f5;
+    margin:0;
+    padding:5% 20% 5% 20%;
+}
+
+#intro2 td{
+    width:20%;
+    vertical-align:top;
+    padding:15px;
+    font-size:14pt;
+}
+span{
+    font-size:1.25em;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+#intro3{
+    text-align:left;
+    font-family:"Roboto Condensed";
+    background-color:#333;
+    color:white;
+    margin:0;
+    padding:5% 20% 5% 20%;
+}
+
+#intro3 td,
+#intro3 th{
+    
+    vertical-align:top;
+    font-size:14pt;
+    padding-top:30px;
+    padding-left:20px;
+    padding-right:20px;
+}
+#intro3 th{
+    text-align:center;
+    font-style:italic;
+}
+
+
+</style>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#h2').show();
+    $("#h2").animate({left: '28%',opacity: '1.0'},"slow");    
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div id="navigator">
+<ul>
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="Tool.htm">Analytical Tools</a></li>
+  <li class="dropdown">
+      <a href="Visualization.htm" class="dropbtn">Visualization</a>
+  <div class="dropdown-content">
+      <a href="DP1.htm">Histogram</a>
+      <a href="DP2.htm">Scatter Plot</a>
+      </div></li>
+  <li class="dropdown">
+      <a href="ML.htm" class="dropbtn">Machine Learning</a>
+  <div class="dropdown-content">
+      <a href="ML1.htm">Linear Regression</a>
+      <a href="ML2.htm">Clustering</a>
+      </div></li>
+  <li><a href="Resource.htm">Resource</a></li>
+  <li class="dropdown">
+      <a href="AboutMe.htm" class="dropbtn">About Me</a>
+<div class="dropdown-content">
+    <a href="Contact.htm">Contact Me</a>
+    </div></li>
+<li><a href="credit.htm">Site Credit</a></li>
+</ul>
+</div>
+
+<div id="head" style="background-color:#f5f5f5;">
+    <img id ="f1" src="picture/3.jpg" alt="p1">
+    <h1> Clustering </h1>
+    <h2 id='h2'> - Unleash the power of data with advanced analytics -</h2>
+</div>
+
+<div id="intro1">
+    <h2>What is Clustering Analysis?</h2>
+    <br>
+    <p><span>Clustering</span> is the task of dividing the population or data points into a number of groups such that data points in the same groups are 
+       more similar to other data points in the same group than those in other groups. In simple words, the aim is to segregate groups with 
+       similar traits and assign them into clusters.</p>
+</div>
+
+
+<div id="intro2">
+    <table>
+        <tr>
+            <td colspan="3" style="border:none;"> <h2>Uses of Clustering</h2></td>
+        </tr>
+        <tr>
+            <td> <span>Marketing:</span> finding groups of customers with similar behavior given a large database of customer data containing their properties and past buying records</td>
+            <td> <span>Biology:</span> classification of plants and animals given their features</td>
+            <td> <span>Insurance:</span> identifying groups of motor insurance policy holders with a high average claim cost</td>
+        </tr>
+        <tr>
+            <td> <span>City-planning:</span>identifying groups of houses according to their house type, value and geographical location</td>
+            <td> <span>Social Network Analysis</span> identify the relationship between groups of people</td>
+            <td> <span>Libraries</span>: book ordering</td>
+        </tr>
+    </table>
+</div>
+
+<div id="intro3">
+    <table>
+        <tr>
+            <td colspan="2"><h2>Two Popular Clustering Algorithm</h2></td>
+        </tr>
+        <tr>
+            <th>K Means</th>
+            <th>Hierarchical Clustering</th>
+        </tr>
+        <tr>
+            <td>k-means clustering aims to partition n observations into k clusters in which each observation belongs to 
+                the cluster with the nearest mean, serving as a prototype of the cluster </td>
+            <td>Hierarchical clustering builds hierarchy of clusters.It starts with all the data points assigned 
+                to a cluster of their own. Then two nearest clusters are merged into the same cluster </td>
+        </tr>
+        <tr>
+            <td> In K Means clustering, the results produced by running the algorithm multiple times might differ </td>
+            <td> In Hierarchical clustering, the results are reproducible</td>
+        </tr>
+        <tr>
+            <td>K Means clustering requires prior knowledge of K - number of clusters you want to divide your data into. </td>
+            <td>In hierarchical clustering, algorithm can be stpped at whatever number of clusters you find appropriate</td>
+        </tr>
+    </table>
+</div>
+
+<div id="footer" style="background-color:white; color:black;">
+    <p>Created by Yuxuan Wang @ Babson College</p>
+</div>
+
+</body>
+
+</html>

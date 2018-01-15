@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Introduction of Histogram. What is a histogram. What can we know from a histogram" />
+    <meta name="keywords" content="Visualization, Graph, diagram, big data, histogram"/>
+    <title>Machine Learning</title>
+<link href='https://fonts.googleapis.com/css?family=Special%20Elite' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<style type="text/css">
+
+
+
+#intro1{
+    text-align:center;
+    font-family:"Roboto Condensed";
+    color:white;
+    background-color:#333;
+    margin:0;
+    padding:5% 20% 5% 20%;
+    font-size:16pt;
+}
+
+#intro2{
+    text-align:center;
+    font-family:"Roboto Condensed";
+    color:white;
+    background-color:#333;
+    margin:0;
+    padding:5% 20% 5% 20%;
+    font-size:16pt;
+}
+
+#intro2 td{
+    width:15%;
+    vertical-align:top;
+    padding:0 5px;
+}
+#dia{
+    background-color:white;
+    padding:20px 0;
+    margin-left:30%;
+}
+
+#f2{
+    width:55%;
+}
+</style>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#h2').show();
+    $("#h2").animate({left: '23%',opacity: '1.0'},"slow");    
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div id="navigator">
+<ul>
+  <li><a href="index.htm">Home</a></li>
+  <li><a href="Tool.htm">Analytical Tools</a></li>
+  <li class="dropdown">
+      <a href="Visualization.htm" class="dropbtn">Visualization</a>
+  <div class="dropdown-content">
+      <a href="DP1.htm">Histogram</a>
+      <a href="DP2.htm">Scatter Plot</a>
+      </div></li>
+  <li class="dropdown">
+      <a href="ML.htm" class="dropbtn">Machine Learning</a>
+  <div class="dropdown-content">
+      <a href="ML1.htm">Linear Regression</a>
+      <a href="ML2.htm">Clustering</a>
+      </div></li>
+  <li><a href="Resource.htm">Resource</a></li>
+  <li class="dropdown">
+      <a href="AboutMe.htm" class="dropbtn">About Me</a>
+<div class="dropdown-content">
+    <a href="Contact.htm">Contact Me</a>
+    </div></li>
+<li><a href="credit.htm">Site Credit</a></li>
+</ul>
+</div>
+
+<div id="head">
+    <img id ="f1" src="picture/2.jpg" alt="p1">
+    <h1> Histogram‎ </h1>
+    <h2 id='h2'> - The Perfect Way to Present the Distribution of Numerical Data -</h2>
+</div>
+
+<div id="intro1">
+    <h2>What is a Histogram ?</h2>
+    <p>A histogram is a plot that lets you discover, and show, the underlying frequency distribution (shape) of a set of continuous data. This allows the inspection of the data for 
+        its underlying distribution (e.g., normal distribution), outliers, skewness, etc. An example of a histogram, and the raw data it was constructed from, is shown below:</p>
+</div>
+
+<div id="dia">
+<img src="picture/histogram.PNG" id="f2" alt="histogram">
+</div>
+
+<div id="intro2">
+    <table>
+    <tr>
+    <td colspan="4"><h2>Insight from a Histogram</h2></td>
+    </tr>
+    <tr>
+        <td>What is the most common system response?</td>
+        <td>What distribution (center, variation and shape) does the data have?</td>
+        <td>Does the data look symmetric or is it skewed to the left or right?</td>
+        <td>Does the data contain outliers?</td>
+    </tr>
+    </table>
+</div>
+
+
+
+
+<div id="footer" style="background-color:white; color:#333;">
+    <p>Created by Yuxuan Wang @ Babson College</p>
+</div>
+</body>
+
+</html>
